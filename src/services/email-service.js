@@ -29,7 +29,7 @@ const createNotification = async (data) => {
     try {
         const response = await repo.create(data);
         return response;
-    } catch (error) {
+    } catch (error) {    
         console.error('Error creating notification:', error);
     }
 };

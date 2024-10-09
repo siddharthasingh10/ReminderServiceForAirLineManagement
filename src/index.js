@@ -13,7 +13,7 @@ const setupAndStartServer=async()=>{
 app.post('/api/v1/tickets',TicketController.create)
     app.listen(PORT,()=>{
         console.log(`server is running on ${PORT}`)
-        jobs();
+       
     })
 
 }
