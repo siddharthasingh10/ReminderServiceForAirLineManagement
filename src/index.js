@@ -4,7 +4,9 @@ const {PORT}=require('./config/serverConfig');
 const {sendBasicEmail}=require('./services/email-service');
 const TicketController=require('./controller.js/ticket-controller')
 
-const jobs=require('./utils/job')
+const jobs=require('./utils/job');
+const { subscribeMessage, createChannel } = require('./utils/messageQueue');
+const { REMINDER_BINDING_KEY } = require('./config/serverConfig');
 const setupAndStartServer=async()=>{
 
     const app=express();
